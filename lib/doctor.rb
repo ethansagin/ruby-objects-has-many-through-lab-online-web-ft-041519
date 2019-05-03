@@ -1,3 +1,5 @@
+require 'pry'
+
 class Doctor
   
   attr_reader :name 
@@ -22,6 +24,7 @@ class Doctor
   end
   
   def patients
+    binding.pry
     self.appointments.map{ |app| app.patient}
   end
   
